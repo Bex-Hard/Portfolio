@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conceito SPA</title>
+    <style>
+        nav button { cursor: pointer; margin: 5px; }
+        #view { padding: 20px; border: 1px solid #ccc; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <button onclick="navegar('home')">Home</button>
+        <button onclick="navegar('projetos')">Projetos</button>
+    </nav>
+
+    <div id="view">Bem-vindo! Clique em um menu acima.</div>
+
+    <script>
+        function navegar(rota) {
+            const view = document.getElementById('view');
+            
+            if (rota === 'home') {
+                view.innerHTML = "<h1>Página Inicial</h1><p>Sou a Rebecca.</p>";
+            } else if (rota === 'projetos') {
+                view.innerHTML = "<h1>Meus Projetos</h1><p>Aqui apareceriam as imagens 1 a 4.</p>";
+            }
+                   }
+    </script>
+</body>
+</html>
